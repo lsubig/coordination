@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>성대 코디네이터 TEST</title>
+  <link rel="stylesheet" href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-neo.css">
+  <style>
+    :root {
+      --primary: #ffffff;
+      --secondary: #c8ffc3;
+    }
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at top, #6b6ca1, #1f1f27);
+  color: white;
+  overflow: hidden;
+  perspective: 1800px;
+  touch-action: none;
+  font-family: 'NanumSquareNeo', sans-serif;
+  position: relative; /* ✅ 추가 */
+}
+
+    h1 {
+      position: absolute;
+      top: 30px;
+      font-size: 2rem;
+      background: linear-gradient(45deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      color: transparent;
+      text-shadow: 0 0 15px rgba(131, 223, 158, 0.5);
+    }
+
+    .carousel {
+      position: relative;
+      width: 400px;
+      height: 320px;
+      transform-style: preserve-3d;
+      transform: rotateY(0deg);
+      transition: transform 1s ease-out;
+    }
+
+    .card {
+      position: absolute;
+      width: 260px;
+      height: 220px;
+      background: rgba(178, 255, 255, 0.08);
+      border-radius: 15px;
+      box-shadow: 0 0 25px rgba(211, 255, 174, 0.781);
+      backdrop-filter: blur(6px);
+      padding: 1rem;
+      text-align: center;
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+      cursor: pointer;
+      
+    }
+
+    .card h3 {
+      margin: 0.5rem 0;
+      font-size: 1.2rem;
+      color: #abffb2;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      color: #ccc;
+      line-height: 1.3;
+      margin-bottom: 1rem;
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 4px;
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: white;
+      text-decoration: none;
+      background: linear-gradient(45deg, var(--primary), var(--secondary));
+      transition: all 0.25s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 12px rgba(255, 138, 61, 0.4);
+    }
+
+    .focused {
+      transform: translateZ(120px) scale(1.2) !important;
+      box-shadow: 0 0 45px rgba(255, 138, 61, 0.6) !important;
+      z-index: 10;
+    }
+      body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("https://i.namu.wiki/i/Tn_c1QC-EnfKg8JAdQzhlk2w_syTa76WE6qOqCbuQqaiLha1jKD96tvnMV9WkAtsxg0I_T9_q8xyFPsBSxYVcihxaKnVZgazpy-EzvUIFZA_PJ-Uu2h__jgZvdAPQI1L2CvCVk9vqn91tb28Etn-LQ.webp")
+      no-repeat center center / cover;
+    opacity: 0.2; /* ✅ 투명도 50% */
+    z-index: -1;
+  }
+
+  </style>
+</head>
+<body>
+  <h1>코디네이터</h1>
+
+  <div class="carousel" id="carousel">
+    <div class="card">
+      <h3>코디1</h3>
+ <img src="https://avatar.maplestory.nexon.com/Character/BOGPBJIFHBAENFKKNNPHAAMNAGPBCDPAKKNHCGGMOLGCNHBDJDCGLPJFHMNLHMAFMNAMPNAJEJIGEKKPHOALKPJBFDEDBPPLCAAKGIKHLLDMAPABKFDIKCGHGHKAILCHNBMEBAEHKIBICDNGLJHHLOIKEMPFODONHHFNLIDKFFCKGBJIGMHDHMFDBHINAOGJFFBODINFKPDIEIAMAGJKHBFCLFPILPPEIPGDCNEPPAEHBIDOJCMDKOCPDNBDGGGJ.png" alt="사진" />
+    </div>
+
+    <div class="card">
+      <h3>코디2</h3>
+ <img src="https://avatar.maplestory.nexon.com/Character/EMNOAKCHKENJNOHDAPHAOEDICGCGPPBDADCDIKNNOFIJLJGIKFFCOINLFIPKHBFKJNNDACKMMPAGJEADGOOOFONGFIDCJJGGBMDMGGBMJMGPPNCFMAPLOHOLIMKGGIJFHNCHOPODGLIPOCAKEIIBBDHILAHLIJEFDOMBKECGOEODLJMPEGCAFJHAALNDIPMEIDCFAANJEOEIMNCDLALBFOFGKMNKFPMNIKEAIJGGGEGOJJPBBPCHDKPDJDINGJPO.png" alt="사진" />
+    </div>
+
+    <div class="card">
+      <h3>코디3</h3>
+ <img src="https://avatar.maplestory.nexon.com/Character/FKFPPINMJDIHEONLNCLJDFEICCEJILPMLBKFGKKANHIBBDLMCGHJFEBIOFPMOFOFHPBEKADFIFLADNAPDLODJBKAKICLNHANENDLALCBOIGKKBGBFJGKCJBHEIJDHKHIJFEHCAEBBKJMEKMGPONEBINFGLJKBJHHDKDOKNCDKHEGHODBDNMDOIJDHKANFKKLDKLHAMEGKLDBKLLMGALJLGMENDGFIECNDHJMFCECMHKAMHOOPCOFBBNOCIIFCHGF.png" alt="사진" />
+    </div>
+
+    <div class="card">
+      <h3>코디4</h3>
+ <img src="https://avatar.maplestory.nexon.com/Character/KOHLHMPNAACLDNGAFMBLKDDCMFLINEODALADDCEBDLPOJJCFJNPDOPPLNNHNDOHCLMAABIBJIBBHFEKDCJJOBOPFBJFDNOCLKOBHJLEEEGNDEIFJBCFCFDPIOLGNLMPGCDJKEPIOEPMBGBJGLLLGIBKCHLDDJAEOMFDHBPGKAAGJPNECPBKNLABHAPNIJKKEEMGLONNNEJNAFHKMOFDOLBBCHGDHEKEKGAEJBJKNHHDKLGILPJGMFLAOHNHGGAHG.png" alt="사진" />
+    </div>
+
+    <div class="card">
+      <h3>코디5</h3>
+ <img src="https://avatar.maplestory.nexon.com/Character/CEFFBDHMNMMKPGNOAADKBHDNCPODNGNEBPHGJMJCNONALAHBMILKDKNFDPACOJPMFNBFFLMBECBNBKCHKCGFCNGGLPCMPEDFJHNBLDOOABJKGAGADHJDPAJFOLLBDNJGPBNCKOKDMOCNPBBGLCHPDBMEDCCAMMMHOCBBBGEMCODKHOLGOFLMHLALMCJOEDGCJBGHCGLMDENGJOKKDNOJELIIDHINBLAICCLMGLBDAIAECOJJEAPAPIIAIEMEFKNF.png" alt="사진" />
+    </div>
+
+    <div class="card">
+      <h3>코디6</h3>
+ <img src="https://avatar.maplestory.nexon.com/Character/BLNHAFIAPAGMCNOLFCJGDEBEDPOAIBCFKOEEBONMIFCOLGBDPOBGPFBHFJBLAPNIFHDBDHOOAFKFJCOCMEIHJOMDAAHGPLBLNCMHLPHFBNKEEDMHCPCAGAHAJPDHMGBIEGPNIHEJHJAKIKFGLKOPMDDJJBHOLBGLFEBBJECGEAOLFMKJFEFHKECJOOKGFIAMBMHIOBHCAFBNKJGCEJAFLGDGGHFHKAMHAHOOHGDOPINNMGMPNPILAJPIONLLJGNA.png" alt="사진" />
+    </div>
+
+    <div class="card">
+      <h3>코디7</h3>
+ <img src="https://avatar.maplestory.nexon.com/Character/DLDLONPHFPCPGIGNBIJHCMELMEFNNFODLHGKECEICBPALKFOFLKICJKCJNGOPCIAKJIKOMIDJEIACJEPENEDBMDIDJMCDBBGELIDBKCCIIPCAKLGFAHPLGBMFLCHJMLONPDMAHCGBODBMIKFAFHODOOCILDAGMIIKENKEKHGEGFNLFCGFJANAKAHIFPDPDBHMPGNCEBFFEFLGODOODNJBJEPFBKBDCOBMCHPHNPACGAEMAFNGCDHADAMAGCOOOGG.png" alt="사진" />
+    </div>
+  </div>
+
+  <script>
+    const carousel = document.getElementById("carousel");
+    const cards = [...carousel.children];
+    const radius = 350;
+    let angle = 0;
+    let startX = 0;
+    let isDragging = false;
+    let focusedCard = null;
+
+    // 카드 배치
+    cards.forEach((card, i) => {
+      const theta = (i / cards.length) * 2 * Math.PI;
+      card.style.transform = `rotateY(${(theta * 180) / Math.PI}deg) translateZ(${radius}px)`;
+    });
+
+    // 스크롤로 회전 제어
+    window.addEventListener("wheel", (e) => {
+      angle += e.deltaY * 0.1;
+      carousel.style.transform = `rotateY(${angle}deg)`;
+    });
+
+    // 모바일 / 태블릿 드래그 제어
+    window.addEventListener("pointerdown", (e) => {
+      isDragging = true;
+      startX = e.clientX;
+    });
+    window.addEventListener("pointermove", (e) => {
+      if (!isDragging) return;
+      const delta = e.clientX - startX;
+      angle += delta * 0.2;
+      carousel.style.transform = `rotateY(${angle}deg)`;
+      startX = e.clientX;
+    });
+    window.addEventListener("pointerup", () => (isDragging = false));
+
+    (() => {
+  // 이미지/링크 드래그 차단
+  document.querySelectorAll('img, a, video, iframe').forEach(el => el.draggable = false);
+
+  // 전체 문서 드래그/텍스트 선택 차단
+  const stop = e => { e.preventDefault(); e.stopPropagation(); return false; };
+  document.addEventListener('dragstart', stop, {passive:false});
+  document.addEventListener('selectstart', stop, {passive:false});
+
+  // 마우스 더블/롱프레스에 의한 드래그 방지
+  document.addEventListener('mousedown', e => { if (e.detail > 1) e.preventDefault(); }, {passive:false});
+  document.addEventListener('touchmove', e => e.preventDefault(), {passive:false});
+})();
+  </script>
+</body>
+</html>
